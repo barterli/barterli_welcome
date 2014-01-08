@@ -1,0 +1,29 @@
+<%= form_for(@join) do |f| %>
+  <% if @join.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@join.errors.count, "error") %> prohibited this join from being saved:</h2>
+
+      <ul>
+      <% @join.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+<!--   <div class="field">
+    <%= f.label :association_type %><br>
+    <%= f.text_field :association_type %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

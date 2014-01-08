@@ -1,0 +1,31 @@
+<h1>Listing joins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Association type</th>
+      <th>Message</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @joins.each do |join| %>
+      <tr>
+        <td><%= join.email %></td>
+        <td><%= join.association_type %></td>
+        <td><%= join.message %></td>
+        <td><%= link_to 'Show', join %></td>
+        <td><%= link_to 'Edit', edit_join_path(join) %></td>
+        <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Join', new_join_path %>
