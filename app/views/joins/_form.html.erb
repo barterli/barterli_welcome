@@ -27,3 +27,24 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<%= form_for(@join, url: join_path()) do |f| %>
+  <% if @join.errors.any? %>
+    <div id="error_explanation">
+      <h2>Error!</h2>
+      <ul>
+      <% @join.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

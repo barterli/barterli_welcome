@@ -5,17 +5,17 @@ class WelcomeController < ApplicationController
   end
 
   def create_join
+    join_params.each_pair do |k, v|
+      params['k'] = v.downcase!
+    end
     @join = Join.new(join_params)
-   
      if @join.save
-       flash[:notice] = "You will receive a notification when the product is live"
-       redirect_to root_path
+       Notifier.welcome_mail(@join).deliver
+       @notice = "You will receive a notification when the product is live"
      else
-       flash[:alert] = "Sorry! looks like invalid email"
-       redirect_to root_path
+       @notice = "Sorry! looks like invalid email or already registered"
      end
   end
-
 
   private
     def join_params

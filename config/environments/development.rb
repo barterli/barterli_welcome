@@ -26,4 +26,20 @@ BarterliWelcome::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+   #added for devise and sending mail
+  config.action_mailer.default_url_options = { :host => 'http://barter.li' }
+  #change false for production
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   :address => "smtp.gmail.com",
+   :port => 587,
+   :enable_starttls_auto => true,
+   :user_name => ENV["USERNAME_SMTP"],
+   :password => ENV["PASSWORD_SMTP"],
+   :domain => 'barter.li',
+   :authentication => 'plain'
+ }
 end
