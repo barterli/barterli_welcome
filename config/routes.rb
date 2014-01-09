@@ -1,7 +1,7 @@
 BarterliWelcome::Application.routes.draw do
   root to: 'welcome#index'
   post '/join', to: 'welcome#create_join', as: :join
-  
+  get '/credits', to: 'welcome#credits'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

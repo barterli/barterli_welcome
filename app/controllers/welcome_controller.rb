@@ -17,6 +17,10 @@ class WelcomeController < ApplicationController
      end
   end
 
+  def credits
+
+  end
+
   private
     def join_params
       params.require(:join).permit(:email, :association_type, :message)
