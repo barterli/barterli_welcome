@@ -1,7 +1,8 @@
 <div class="container">
   <div class="content">
     <h1 style="margin-left:0%; font-size:36px; text-align:center; margin-right:auto; font-family:Raga,Verdana, Geneva, sans-serif"> Let  Knowledge flow free</h1>
-    <span style=" text-align:center"> <img src="/assets/center_image.png" style="display:block; margin-left:auto; margin-right:auto;"/>
+    <span style=" text-align:center"> <img src="<%= asset_path 'center_image.png' %>" style="display:block; margin-left:auto; margin-right:auto;"/>
+
     </span>
     <h2 style="font-family:din_light,Verdana, Geneva, sans-serif; text-align:center;">A TRIBUTE TO AARON SWARTZ  </h2>
     <h1 style="font-family:din_medium,Verdana, Geneva, sans-serif; text-align:center; margin-top:-20px;">JOIN THE BAND  </h1>
@@ -9,7 +10,8 @@
     
     <div style="margin-left:auto; margin-right:auto; text-align:center;">
     <div onclick="toggle_visibility('foo');"> 
-    <img src="/assets/contri.png" /></div>
+    <img src="<%= asset_path 'contri.png' %>" /></div>
+
     </br></br>
 <div id="foo" hidden=" ">
 <%= form_for(@join, url: join_path(), remote: true) do |f| %>
