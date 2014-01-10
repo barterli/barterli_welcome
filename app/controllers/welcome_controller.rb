@@ -12,8 +12,19 @@ class WelcomeController < ApplicationController
      if @join.save
        Notifier.welcome_mail(@join).deliver
        @notice = "You will receive a notification when the product is live"
+       @redirect = true
      else
-       @notice = "Sorry! looks like invalid email or already registered"
+       @redirect = false
+       @errors = "<ul>"
+      @join.errors.each do |name, error|
+          if name.to_s.downcase == "email"
+            @errors += "<li>"+name.to_s.capitalize + " " + error+"</li>"
+         else
+            @errors += "<li>"+error+"</li>"
+         end
+       end
+        @errors += "</ul>"
+        @notice = @errors.html_safe
      end
   end
 

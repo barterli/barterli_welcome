@@ -1,34 +1,38 @@
 <div class="container">
   <div class="content">
     <h1 style="margin-left:0%; font-size:36px; text-align:center; margin-right:auto; font-family:Raga,Verdana, Geneva, sans-serif"> Let  Knowledge flow free</h1>
-    <span style=" text-align:center"> <img src="<%= asset_path 'center_image.png' %>" style="display:block; margin-left:auto; margin-right:auto;"/>
+    <span style=" text-align:center"> <a href="http://en.wikipedia.org/wiki/Aaron_Swartz"><img src="<%= asset_path 'center_image.png' %>" style="display:block; margin-left:auto; margin-right:auto;"/></a>
 
     </span>
-    <h2 style="font-family:din_light,Verdana, Geneva, sans-serif; text-align:center;">A TRIBUTE TO AARON SWARTZ  </h2>
-    <h1 style="font-family:din_medium,Verdana, Geneva, sans-serif; text-align:center; margin-top:-20px;">barter.li - an open source community project to empower free exchange of books.  </h1>
+    <h2 style="font-family:din_light,Verdana, Geneva, sans-serif; text-align:center;"><a href="http://en.wikipedia.org/wiki/Aaron_Swartz">A TRIBUTE TO AARON SWARTZ</a></h2>
+    <p style="font-family:din_medium,Verdana, Geneva, sans-serif; text-align:center; margin-top:-20px;font-size:21px">barter.li - an open source community project to empower free exchange of books.  </p>
     
     
     <div style="margin-left:auto; margin-right:auto; text-align:center;">
     <div onclick="toggle_visibility('foo');"> 
-    <img src="<%= asset_path 'contri.png' %>" /></div>
+    <img class ="shadow" src="<%= asset_path 'contri.png' %>" /></div>
 
     </br></br>
 <div id="foo" hidden=" ">
 <%= form_for(@join, url: join_path(), remote: true) do |f| %>
 <div id="message"></div>
-<input type="text" name="join[email]"   placeholder="Enter E-mail ID " style="background-color:#cdad9e;border-color:#FFF;color:#FFF; opacity:0.8">Contribution:
-<select style="background-color:#cdad9e;border-color:#FFF;color:#FFF; opacity:0.8" name = "join[association_type]" >
-  <option value="Sponsor">Sponsor</option>
+<input type="text" name="join[email]" class="textbox"  placeholder="Enter E-mail ID">&nbsp;
+<span class="dropdown">
+<select class="textbox-select" name = "join[association_type]" >
+  <option value="" disabled selected style="background-color:transparent;display:none">Enlist As</option>
+  <option style="background-color:transparent" value="Sponsor">Sponsor</option>
   <option value="Design" style="background-color:transparent">Designer</option>
-  <option value="Dev" style="background-color:transparent">Developer</option>
+  <option value="Developer" style="background-color:transparent">Developer</option>
+  <option value="Volunteer" style="background-color:transparent">User</option>
   <option value="Volunteer" style="background-color:transparent">Volunteer</option>
 </select>
-<input type="submit" value="Submit" id="submit" >
+</span>
+<input type="submit" value="Submit"  id="gobutton" >
 <% end %>
 </div>
 </div></br></br>
-<p style="text-align:center; font-size:20px; position:static;">
-<a href="http://blog.barter.li" style=" color:#FFF">Blog</a>   <a href="/credits" style=" color:#FFF">Credits</a></p>
+<p class = "blog" style="text-align:center; font-size:20px; position:static;">
+<a href="http://blog.barter.li" style=" color:#FFF">Blog</a> </p>
     
     
     

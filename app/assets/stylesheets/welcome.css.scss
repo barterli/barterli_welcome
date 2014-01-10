@@ -29,19 +29,19 @@ body {
 	color: #ffffff;
 }
 ::-webkit-input-placeholder {
-   color:#FFF;
+   color:#BEB29B;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color:#FFF;  
+   color:#BEB29B;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color:#FFF;  
+   color:#BEB29B;  
 }
 
 :-ms-input-placeholder {  
-   color:#FFF;  
+   color:#BEB29B;  
 }
 form input.text{
 	background-color:#666;}
@@ -50,6 +50,14 @@ ul, ol, dl { /* Due to variations between browsers, it's best practices to zero 
 	padding: 0;
 	margin: 0;
 }
+
+h2 a {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+
+
 h1, h2, h3, h4, h5, h6, p {
 	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
 	padding-right: 15px;
@@ -114,3 +122,104 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	line-height: 0px;
 }
 
+
+  .textbox-select { 
+ /*   background: none repeat scroll 0 0 #732100;
+    border: 1px solid #FFA853;
+    /*border-radius: 5px;*/
+    /*box-shadow: 0 0 5px 3px #FFA853;
+    color: white;
+    height: 30px;
+    opacity: 0.61;
+    outline: medium none;
+    width: 200px;*/
+  } 
+
+
+
+.dropdown p {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.dropdown select {
+
+      border: 1px solid #FFA853;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      background: none repeat scroll 0 0 #732100;  /*Adds background-image*/
+      background-position: 82px 7px;  /*Position of the background-image*/
+      width: 100px; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: "";  /*Removes default arrow from firefox*/
+      box-shadow: 0 0 5px 3px #FFA853;
+      /*My custom style for fonts*/
+       opacity: 0.61;
+      color: #966C50;
+      height: 26px;
+      padding: 2px;
+}
+
+ 
+ 
+  .textbox { 
+    background: none repeat scroll 0 0 #732100;
+    border: 1px solid #FFA853;
+    /*border-radius: 5px;*/
+    box-shadow: 0 0 5px 3px #FFA853;
+    color: white;
+    height: 22px;
+    opacity: 0.61;
+    outline: medium none;
+    width: 275px;
+  } 
+
+  /***FIRST STYLE THE BUTTON***/
+input#gobutton{
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+padding: 2px 15px;/*add some padding to the inside of the button*/
+background:#F99200; /*the colour of the button*/
+border:1px solid white; /*required or the default border for the browser will appear*/
+/*give the button curved corners, alter the size as required*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+opacity: 0.68;
+/*border-radius: 10px;*/
+/*give the button a drop shadow*/
+-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+box-shadow: 0 0 4px rgba(0,0,0, .75);
+/*style the text*/
+color:#f3f3f3;
+font-weight: bold;
+/*font-size:1.1em;*/
+}
+
+
+ input#gobutton:hover, input#gobutton:focus{
+background-color :#F1CC00; /*make the background a little darker*/
+/*reduce the drop shadow size to give a pushed button effect*/
+-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+.blog {
+    position: absolute !important;
+    right: 54px;
+    top: 69px;
+}
+
+.blog a {
+
+	text-decoration: none !important;
+	color: white !important;
+	font-size: 15px;
+	
+}
+
+.shadow {
+  -moz-box-shadow:    0 0 17px 2px #CCCCCC;
+  -webkit-box-shadow: 0 0 17px 2px #CCCCCC;
+  box-shadow:         0 0 17px 2px #CCCCCC;
+}
