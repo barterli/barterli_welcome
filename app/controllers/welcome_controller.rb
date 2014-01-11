@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     end
     @join = Join.new(join_params)
      if @join.save
-       Notifier.welcome_mail(@join).deliver
+       #Notifier.welcome_mail(@join).deliver
        @notice = "You will receive a notification when the product is live"
        @redirect = true
      else
