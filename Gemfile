@@ -44,6 +44,8 @@ gem 'capistrano-rails', '~> 1.0.0'
 
 gem 'capistrano-rvm'
 
+gem 'rails_admin'
+
 
 
 
@@ -58,3 +60,6 @@ gem 'capistrano-rvm'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+gem "devise"
